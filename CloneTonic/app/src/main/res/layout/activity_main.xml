@@ -7,6 +7,13 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <include
+        android:id="@+id/toppractice_bar"
+        layout="@layout/action_bar_p"/>
+    <include
+        android:id="@+id/toplive_bar"
+        layout="@layout/action_bar_l"/>
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -16,10 +23,14 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navi"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:itemIconSize="20dp"
         app:itemIconTint="@drawable/btm_tint_selector"
         app:itemTextColor="@drawable/btm_tint_selector"
-        app:menu="@menu/bottom_menu" />
+        app:menu="@menu/navi_menu"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        app:itemTextAppearanceActive="@style/FontSize8"
+        app:labelVisibilityMode="unlabeled"/>
 
 </LinearLayout>

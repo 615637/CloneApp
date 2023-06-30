@@ -22,13 +22,13 @@ public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.binding.exImg.setImageResource(R.drawable.plus);
+        h.binding.profileImg.setImageResource(R.drawable.cat);
 
     }
 
     @Override
     public int getItemCount() {
-        return 12;
+        return 30;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
