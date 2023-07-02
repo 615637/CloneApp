@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 
 import com.example.clonetonic.databinding.ActivityLivenowDetailBinding;
 
@@ -17,6 +18,7 @@ public class LivenowDetailActivity extends AppCompatActivity {
         binding = ActivityLivenowDetailBinding.inflate(getLayoutInflater());
 
         binding.recvLivenowdetail.setAdapter(new LivenowDetailAdapter());
+        binding.recvLivenowdetail.setLayoutManager(new LinearLayoutManager(this));
 
         setContentView(binding.getRoot());
 

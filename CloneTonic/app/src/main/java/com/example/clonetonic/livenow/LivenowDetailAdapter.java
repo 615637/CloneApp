@@ -29,7 +29,7 @@ public class LivenowDetailAdapter extends RecyclerView.Adapter<LivenowDetailAdap
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 5;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
