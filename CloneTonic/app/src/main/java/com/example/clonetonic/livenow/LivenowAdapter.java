@@ -1,5 +1,7 @@
 package com.example.clonetonic.livenow;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -11,6 +13,11 @@ import com.example.clonetonic.databinding.ItemLivenowBinding;
 
 public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHolder> {
     ItemLivenowBinding binding;
+    Context context;
+
+    public LivenowAdapter(Context context) {
+        this.context = context;
+    }
 
     @NonNull
     @Override
@@ -22,8 +29,12 @@ public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.binding.profileImg.setImageResource(R.drawable.cat);
+        binding.liveProfile.setImageResource(R.drawable.ex_img);
 
+        binding.liveProfile.setOnClickListener(v -> {
+            Intent intent = new Intent(context, LivenowDetailActivity.class);
+            context.startActivity(intent);
+        });
     }
 
     @Override

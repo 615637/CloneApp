@@ -4,5 +4,5 @@
         android:state_checked="true"
         android:color="#292929"/>
     <item
-        android:color="#818181"/>
+        android:color="#B5B5B5"/>
 </selector>

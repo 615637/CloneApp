@@ -7,7 +7,7 @@
         android:id="@+id/btm_practice"
         android:enabled="true"
         android:icon="@drawable/btm_practice"
-        android:title="PRACTICE"/>
+        android:title="PRACTICE0"/>
     <item
         android:enabled="true"
         android:id="@+id/btm_livenow"

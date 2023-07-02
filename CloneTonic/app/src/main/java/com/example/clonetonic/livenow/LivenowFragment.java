@@ -19,7 +19,7 @@ public class LivenowFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentLivenowBinding.inflate(inflater, container, false);
-        binding.recvLivenow.setAdapter(new LivenowAdapter());
+        binding.recvLivenow.setAdapter(new LivenowAdapter(getContext()));
         binding.recvLivenow.setLayoutManager(new GridLayoutManager(getContext(), 3));
         return binding.getRoot();
     }

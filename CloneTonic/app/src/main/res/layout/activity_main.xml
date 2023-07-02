@@ -4,33 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/toppractice_bar"
-        layout="@layout/action_bar_p"/>
-    <include
-        android:id="@+id/toplive_bar"
-        layout="@layout/action_bar_l"/>
-
-    <FrameLayout
-        android:id="@+id/container"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navi"
+        <LinearLayout
+            android:id="@+id/practice_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/top_plus"
+                app:tint="@drawable/btm_tint_selector" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/top_live"
+            layout="@layout/action_bar_live"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemIconSize="20dp"
-        app:itemIconTint="@drawable/btm_tint_selector"
-        app:itemTextColor="@drawable/btm_tint_selector"
-        app:menu="@menu/navi_menu"
-        android:paddingLeft="80dp"
-        android:paddingRight="80dp"
-        app:itemTextAppearanceActive="@style/FontSize8"
-        app:labelVisibilityMode="unlabeled"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <View style="@style/Divider"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navi"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:paddingBottom="5dp"
+                app:itemIconSize="20dp"
+                app:itemIconTint="@drawable/btm_tint_selector"
+                app:itemTextAppearanceActive="@style/FontSize8"
+                app:itemTextAppearanceInactive="@style/FontSize8"
+                app:itemTextColor="@drawable/btm_tint_selector"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/navi_menu"/>
+
+    </LinearLayout>
 
 </LinearLayout>
