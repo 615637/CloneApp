@@ -6,22 +6,22 @@
     <item
         android:id="@+id/btm_practice"
         android:enabled="true"
-        android:icon="@drawable/btm_practice"
+        android:icon="@drawable/practice"
         android:title="PRACTICE0"/>
     <item
         android:enabled="true"
         android:id="@+id/btm_livenow"
-        android:icon="@drawable/btm_livenow"
+        android:icon="@drawable/livenow"
         android:title="LIVE NOW"/>
     <item
         android:enabled="true"
         android:id="@+id/btm_search"
-        android:icon="@drawable/btm_search"
+        android:icon="@drawable/search"
         android:title="SEARCH"/>
     <item
         android:enabled="true"
         android:id="@+id/btm_groups"
-        android:icon="@drawable/btm_groups"
+        android:icon="@drawable/groups"
         android:title="GROUPS"/>
 
 

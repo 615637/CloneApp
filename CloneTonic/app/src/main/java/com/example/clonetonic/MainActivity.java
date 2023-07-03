@@ -1,11 +1,10 @@
 package com.example.clonetonic;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.ActionMode;
 import android.view.View;
 
 import com.example.clonetonic.databinding.ActivityMainBinding;
@@ -18,34 +17,35 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FragmentManager manager = getSupportFragmentManager();
 
-    ActionMode actionMode = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        manager.beginTransaction().replace(R.id.container, new PracticeFragment()).commit();
 
-        binding.practiceBar.setVisibility(View.VISIBLE);
-
-        binding.bottomNavi.setOnItemSelectedListener(item -> {
-            Fragment fragment = null;
-            if(item.getItemId()==R.id.btm_practice){
-                fragment = new PracticeFragment();
-                binding.practiceBar.setVisibility(View.VISIBLE);
-            }else if (item.getItemId()==R.id.btm_livenow){
-                fragment = new LivenowFragment();
-
-            } else if (item.getItemId()==R.id.btm_search) {
-
-                fragment = new SearchFragment();
-            } else if (item.getItemId()==R.id.btm_groups) {
-
-                fragment = new GroupsFragment();
-            }
-            manager.beginTransaction().replace(R.id.container, fragment).commit();
-            return true;
+        binding.btmPractice.setOnClickListener(v -> {
+            manager.beginTransaction().replace(R.id.container, new PracticeFragment()).commit();
+            binding.bottomNavi.setBackgroundColor(Color.WHITE);
+            binding.divider.setVisibility(View.VISIBLE);
         });
+        binding.btmLivenow.setOnClickListener(v -> {
+            manager.beginTransaction().replace(R.id.container, new LivenowFragment()).commit();
+            binding.bottomNavi.setBackgroundColor(Color.parseColor("#232325"));
+            binding.divider.setVisibility(View.GONE);
+        });
+        binding.btmSearch.setOnClickListener(v -> {
+            manager.beginTransaction().replace(R.id.container, new SearchFragment()).commit();
+            binding.bottomNavi.setBackgroundColor(Color.WHITE);
+            binding.divider.setVisibility(View.VISIBLE);
+        });
+        binding.btmGroups.setOnClickListener(v -> {
+            manager.beginTransaction().replace(R.id.container, new GroupsFragment()).commit();
+            binding.bottomNavi.setBackgroundColor(Color.WHITE);
+            binding.divider.setVisibility(View.VISIBLE);
+        });
+
+
 
     }
 }

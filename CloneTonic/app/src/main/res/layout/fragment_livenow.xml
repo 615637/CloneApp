@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".livenow.LivenowFragment"
-    android:background="@color/black">
+    android:background="#1B1A1F">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/practice_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/top_plus"
-                app:tint="@drawable/btm_tint_selector" />
-        </LinearLayout>
-
-        <include
-            android:id="@+id/top_live"
-            layout="@layout/action_bar_live"
-            android:visibility="gone"/>
-
-    </RelativeLayout>
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,22 +15,44 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <View style="@style/Divider"/>
+        <View
+            android:id="@+id/divider"
+            style="@style/Divider"/>
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_navi"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:paddingLeft="80dp"
-                android:paddingRight="80dp"
-                app:itemIconSize="20dp"
-                app:itemIconTint="@drawable/btm_tint_selector"
-                app:itemTextAppearanceActive="@style/FontSize8"
-                app:itemTextAppearanceInactive="@style/FontSize8"
-                app:itemTextColor="@drawable/btm_tint_selector"
-                app:labelVisibilityMode="labeled"
-                app:menu="@menu/navi_menu"/>
+        <LinearLayout
+            android:id="@+id/bottom_navi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="#FEFEFE">
+
+            <TextView
+                android:id="@+id/btm_practice"
+                style="@style/Button"
+                android:text="PRACTICE"
+                android:drawableTop="@drawable/btm_practice"/>
+
+            <TextView
+                android:id="@+id/btm_livenow"
+                style="@style/Button"
+                android:text="LIVE NOW"
+                android:drawableTop="@drawable/btm_livenow"/>
+
+            <TextView
+                android:id="@+id/btm_search"
+                style="@style/Button"
+                android:text="SEARCH"
+                android:drawableTop="@drawable/btm_search"/>
+
+            <TextView
+                android:id="@+id/btm_groups"
+                style="@style/Button"
+                android:text="GROUPS"
+                android:drawableTop="@drawable/btm_groups"/>
+
+        </LinearLayout>
 
     </LinearLayout>
+
 
 </LinearLayout>
