@@ -22,5 +22,9 @@ public class LivenowDetailActivity extends AppCompatActivity {
 
         setContentView(binding.getRoot());
 
+        binding.ldetailOut.setOnClickListener(v -> {
+            finish();
+        });
+
     }
 }
