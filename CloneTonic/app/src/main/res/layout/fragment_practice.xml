@@ -22,14 +22,25 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/top_plus"
-                android:tint="#CD7DFF"/>
+                android:src="@drawable/top_plus"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_gravity="right"
+                android:src="@drawable/bell"
+                android:layout_marginRight="10dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ex_img" />
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -37,6 +48,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="300dp"/>
 
 </LinearLayout>
