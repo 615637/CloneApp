@@ -23,22 +23,3 @@ https://raekki.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%
 프리미티브 타입, 레퍼런스 타입
 https://yeastriver.tistory.com/7
 
-향상된 for문(배열에만 사용 가능)
-int datas[] = {1, 2, 3, 4, 5};
-		for(int idx=0; idx<datas.length; idx++){
-		System.out.println(datas[idx]);
-		}
-		for( /*변수 선언*/ int no: datas) {
-			System.out.println(no);
-		}
-		ArrayList<Integer> values = new ArrayList<Integer>();
-		values.add(10);
-		values.add(20);
-		values.add(30);
-		
-		//wrapper클래스
-		
-		//Integer는 int로 언박싱 가능
-		for(int v : values) {
-			
-		}

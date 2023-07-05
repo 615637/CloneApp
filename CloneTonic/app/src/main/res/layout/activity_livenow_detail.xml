@@ -110,7 +110,7 @@
             android:layout_weight="1"
             android:hint="Type a message..."
             android:textColorHint="#76787E"
-            android:background="@drawable/box_background"
+            android:background="@drawable/background_chat"
             android:layout_marginRight="10dp"
             android:layout_gravity="bottom"/>
 
@@ -122,7 +122,7 @@
             android:text="♥"
             android:paddingRight="15dp"
             android:textSize="15dp"
-            android:background="@drawable/box_background"/>
+            android:background="@drawable/background_chat"/>
         </LinearLayout>
     </LinearLayout>
 
