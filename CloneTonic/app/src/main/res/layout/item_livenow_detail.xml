@@ -8,7 +8,8 @@
         android:id="@+id/live_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/black">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chat_profile"
@@ -30,12 +31,14 @@
                 android:layout_height="wrap_content"
                 android:text="donna tang"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"/>
             <TextView
                 android:id="@+id/chat_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thank you hahaha"/>
+                android:text="Thank you hahaha"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
     </LinearLayout>
