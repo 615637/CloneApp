@@ -34,7 +34,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="설탕크림"
+                        android:text="닉네임"
                         android:textSize="60dp"
                         android:textColor="#D3D3D5"/>
 
