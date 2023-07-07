@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".search.SearchFragment">
+    android:orientation="vertical"
+    tools:context=".search.SearchFragment"
+    android:layout_margin="10dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="search" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <EditText
+            android:drawableLeft="@drawable/search_resize"
+            android:drawablePadding="10dp"
+            android:background="@drawable/background_searchbox"
+            android:drawableTint="#A9A9AB"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Search"
+            android:textSize="15dp"
+            android:textColor="#A9A9AB"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/featurd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Featured"
+            style="@style/FontTitle"/>
+
+        <TextView
+            android:layout_alignBaseline="@+id/featurd"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:textFontWeight="700"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recently"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently played works"
+            style="@style/FontTitle"/>
+        <TextView
+            android:layout_alignBaseline="@id/recently"
+            android:textFontWeight="700"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

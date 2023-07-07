@@ -11,9 +11,22 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ex_img"
-        android:background="@drawable/gradient1"
+        android:background="@drawable/background_gradient1"
         android:padding="2dp"
         />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ex_img"/>
+
+    </androidx.cardview.widget.CardView>
 
 
 

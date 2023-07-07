@@ -19,14 +19,14 @@
                 android:id="@+id/ldetail_out"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/out"
+                android:src="@drawable/btn_out"
                 android:scaleX="-1"/>
 
             <ImageView
                 android:id="@+id/ldetail_more"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/more"
+                android:src="@drawable/btn_more"
                 android:layout_alignParentRight="true"/>
 
         </RelativeLayout>
