@@ -46,6 +46,7 @@
             android:textFontWeight="700"/>
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_featured"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
