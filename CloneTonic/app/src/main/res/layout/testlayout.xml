@@ -2,37 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ex_img"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/chat_profile"
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ex_img"
-        android:background="@drawable/background_gradient1"
-        android:padding="2dp"
-        />
-
-</RelativeLayout>
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="5dp"/>
 
 
     <RelativeLayout

@@ -12,18 +12,12 @@
         android:layout_height="160dp"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ex_img" />
-
-        </androidx.cardview.widget.CardView>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:riv_corner_radius="10dp"
+            android:src="@drawable/ex_img"
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:layout_width="wrap_content"

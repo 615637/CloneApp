@@ -23,6 +23,8 @@ public class SearchFragment extends Fragment {
         binding = FragmentSearchBinding.inflate(inflater, container, false);
         binding.recvFeatured.setAdapter(new SearchFeaturedAdapter(getContext()));
         binding.recvFeatured.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
+        binding.recvRecently.setAdapter(new SearchRecentlyAdapter(getContext()));
+        binding.recvRecently.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         return binding.getRoot();
     }
 }
