@@ -19,9 +19,6 @@
             android:name=".livenow.LivenowDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".practice.PracticeDetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

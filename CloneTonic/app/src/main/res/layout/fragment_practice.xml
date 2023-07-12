@@ -308,6 +308,7 @@
                 android:paddingRight="15dp">
 
                 <ImageView
+                    android:id="@+id/btn_studio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/btn_add_grad"/>
