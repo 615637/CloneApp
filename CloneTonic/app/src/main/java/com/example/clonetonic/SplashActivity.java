@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.clonetonic.databinding.ActivitySplashBinding;
+import com.example.clonetonic.start.StartActivity;
 
 public class SplashActivity extends AppCompatActivity {
     ActivitySplashBinding binding;
@@ -20,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, StartActivity.class);
             startActivity(intent);
             finish();
         }, 1000);
