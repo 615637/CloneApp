@@ -22,7 +22,7 @@ public class PracticeFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentPracticeBinding.inflate(inflater, container, false);
         binding.btnStudio.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), StudioActivity.class);
+            Intent intent = new Intent(getContext(), StudioActivity.class);
             startActivity(intent);
         });
 

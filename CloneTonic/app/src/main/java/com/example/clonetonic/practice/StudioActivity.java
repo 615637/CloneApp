@@ -20,11 +20,13 @@ public class StudioActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.btnConnect.setVisibility(View.GONE);
         binding.btnLock.setVisibility(View.GONE);
+
         a = 0;
 
         binding.btnBack.setOnClickListener(v -> {
             finish();
         });
+
         binding.btnUnlock.setOnClickListener(v -> {
             binding.btnUnlock.setVisibility(View.GONE);
             binding.btnLock.setVisibility(View.VISIBLE);
