@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.clonetonic.MainActivity;
 import com.example.clonetonic.R;
 import com.example.clonetonic.databinding.ActivityStartBinding;
 
@@ -18,6 +19,10 @@ public class StartActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.btnGetstart.setOnClickListener(v -> {
             Intent intent = new Intent(this, StartInstrumentActivity.class);
+            startActivity(intent);
+        });
+        binding.btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
     }

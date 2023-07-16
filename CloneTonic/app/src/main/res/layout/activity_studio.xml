@@ -65,12 +65,14 @@
                     style="@style/FontTitle"
                     android:textColor="@color/white"/>
                 <TextView
+                    android:id="@+id/btn_addtech"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_add_box"
                     android:drawablePadding="10dp"
                     android:gravity="center"
-                    android:text="Add a piece or technoque"
+                    android:text="Add a piece or technique"
+                    android:textSize="18sp"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
@@ -131,6 +133,6 @@
 
     </RelativeLayout>
 
-
+    <include layout="@layout/slide_technique"/>
 
 </LinearLayout>
