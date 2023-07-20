@@ -67,6 +67,7 @@
             android:text="Connect with other musicians who share your \n interests." />
 
         <TextView
+            android:id="@+id/btn_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
