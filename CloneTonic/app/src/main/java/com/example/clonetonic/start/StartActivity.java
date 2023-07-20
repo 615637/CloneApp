@@ -22,7 +22,7 @@ public class StartActivity extends AppCompatActivity {
             startActivity(intent);
         });
         binding.btnLogin.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }

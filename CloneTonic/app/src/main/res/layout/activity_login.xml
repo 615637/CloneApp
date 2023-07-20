@@ -6,87 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".start.StartInstrumentActivity">
 
-    <ScrollView
-        android:id="@+id/age_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:paddingTop="20dp">
         <LinearLayout
+            android:layout_marginTop="80dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login"
+                    android:layout_marginBottom="30dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log in to Tonic"
+                    style="@style/FontTitle"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
 
             <LinearLayout
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Log in"
+                    android:id="@+id/login_google"
                     style="@style/FontTitle"
-                    android:textSize="30sp"
-                    android:layout_marginBottom="40dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    style="@style/FontTitle"/>
-
-                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="me@mail.com"
-                    android:background="@drawable/background_instrument"
-                    android:paddingLeft="20dp"/>
-
-                <TextView
-                    android:layout_marginTop="25dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Password"
-                    style="@style/FontTitle"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="********"
-                    android:background="@drawable/background_instrument"
-                    android:paddingLeft="20dp"/>
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Forgot password?"
-                    style="@style/FontTitle"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/background_btn"
-                    android:text="Log in"
-                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Continue with Google"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_btn_b_w"
+                    android:text="Continue with email"
+                    android:gravity="center"
+                    style="@style/FontTitle"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_btn_b_w"
+                    android:text="Continue with phone"
                     android:gravity="center"
                     style="@style/FontTitle"/>
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
