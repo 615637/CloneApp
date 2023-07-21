@@ -11,11 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.clonetonic.R;
 import com.example.clonetonic.databinding.ItemLivenowBinding;
 
+import java.util.ArrayList;
+
 public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHolder> {
     ItemLivenowBinding binding;
+    ArrayList<LiveDTO> list;
     Context context;
 
-    public LivenowAdapter(Context context) {
+    public LivenowAdapter(ArrayList<LiveDTO> list, Context context) {
+        this.list = list;
         this.context = context;
     }
 
@@ -29,7 +33,9 @@ public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        binding.liveProfile.setImageResource(R.drawable.ex_img);
+        binding.liveProfile.setImageResource(list.get(i).getImgId());
+        binding.liveInstrument.setImageResource(list.get(i).getInstrument());
+        binding.liveName.setText(list.get(i).getName());
 
         binding.liveProfile.setOnClickListener(v -> {
             Intent intent = new Intent(context, LivenowDetailActivity.class);
@@ -39,7 +45,7 @@ public class LivenowAdapter extends RecyclerView.Adapter<LivenowAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 30;
+        return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

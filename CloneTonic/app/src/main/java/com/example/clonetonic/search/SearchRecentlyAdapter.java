@@ -9,11 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clonetonic.databinding.ItemRecentlyBinding;
 
+import java.util.ArrayList;
+
 public class SearchRecentlyAdapter extends RecyclerView.Adapter<SearchRecentlyAdapter.ViewHolder> {
     ItemRecentlyBinding binding;
+    ArrayList<SearchDTO> list;
     Context context;
 
-    public SearchRecentlyAdapter(Context context) {
+    public SearchRecentlyAdapter(ArrayList<SearchDTO> list, Context context) {
+        this.list = list;
         this.context = context;
     }
 
@@ -26,13 +30,18 @@ public class SearchRecentlyAdapter extends RecyclerView.Adapter<SearchRecentlyAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+        binding.imgvRecently.setImageResource(list.get(i).getImgId());
+        binding.imgvProfile.setImageResource(list.get(i).getProfile());
+        binding.tvRecently.setText(list.get(i).getTitle());
+        binding.tvWriter.setText(list.get(i).getWriter());
+
 
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

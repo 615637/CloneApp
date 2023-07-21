@@ -16,6 +16,7 @@
         android:layout_height="wrap_content">
 
         <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgv_recently"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ex_img"
@@ -23,6 +24,7 @@
             app:riv_corner_radius="5dp"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgv_profile"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/cat"
@@ -40,6 +42,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_recently"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="Tchaikovsky: Violin Concerto in D major, op. 35: I. Allegro"
@@ -48,6 +51,7 @@
             android:textFontWeight="700"/>
 
         <TextView
+            android:id="@+id/tv_writer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PianoDreams" />

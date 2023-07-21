@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clonetonic.databinding.ItemFeaturedBinding;
 
+import java.util.ArrayList;
+
 public class SearchFeaturedAdapter extends RecyclerView.Adapter<SearchFeaturedAdapter.ViewHolder> {
 
     ItemFeaturedBinding binding;
@@ -27,7 +29,7 @@ public class SearchFeaturedAdapter extends RecyclerView.Adapter<SearchFeaturedAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
 
     }

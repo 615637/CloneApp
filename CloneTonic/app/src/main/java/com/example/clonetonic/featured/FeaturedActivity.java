@@ -7,6 +7,9 @@ import android.os.Bundle;
 
 import com.example.clonetonic.R;
 import com.example.clonetonic.databinding.ActivityFeaturedBinding;
+import com.example.clonetonic.search.SearchDTO;
+
+import java.util.ArrayList;
 
 public class FeaturedActivity extends AppCompatActivity {
     ActivityFeaturedBinding binding;
@@ -23,4 +26,13 @@ public class FeaturedActivity extends AppCompatActivity {
             finish();
         });
     }
+
+    public ArrayList<FeaturedDTO> featuredList(){
+        ArrayList<FeaturedDTO> list = new ArrayList<>();
+        list.add(new FeaturedDTO(R.drawable.ex_img, "Music Theory Group"));
+        list.add(new FeaturedDTO(R.drawable.ex_img, "Music Theory Group"));
+
+        return list;
+    }
+
 }

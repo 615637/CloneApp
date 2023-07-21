@@ -38,6 +38,7 @@
             style="@style/FontTitle"/>
 
         <TextView
+            android:id="@+id/featurd_see"
             android:layout_alignBaseline="@+id/featurd"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"

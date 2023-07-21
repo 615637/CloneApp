@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.clonetonic.MainActivity;
 import com.example.clonetonic.databinding.ActivityLoginBinding;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -27,6 +28,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.btnBack.setOnClickListener(view -> {
+            finish();
+        });
+        binding.loginEmail.setOnClickListener(v -> {
+            intent();
+        });
+        binding.loginPhone.setOnClickListener(v -> {
+            intent();
+        });
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -35,10 +46,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
-
-        binding.btnBack.setOnClickListener(view -> {
-            finish();
-        });
 
         binding.loginGoogle.setOnClickListener(v -> {
                     signIn();
@@ -82,5 +89,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         Toast.makeText(this, "구글 로그인 연결 실패", Toast.LENGTH_SHORT).show();
     }
 
+    public void intent(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
 

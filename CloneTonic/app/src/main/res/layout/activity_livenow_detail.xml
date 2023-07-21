@@ -41,11 +41,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:src="@drawable/ex_img"/>
+                    android:src="@drawable/playing"/>
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
