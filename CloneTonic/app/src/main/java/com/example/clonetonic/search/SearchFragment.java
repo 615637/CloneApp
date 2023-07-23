@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.clonetonic.R;
 import com.example.clonetonic.databinding.FragmentSearchBinding;
 import com.example.clonetonic.featured.FeaturedActivity;
+import com.example.clonetonic.featured.FeaturedDTO;
 import com.example.clonetonic.livenow.LiveDTO;
 import com.example.clonetonic.livenow.LivenowAdapter;
 
@@ -26,7 +27,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentSearchBinding.inflate(inflater, container, false);
-        binding.recvFeatured.setAdapter(new SearchFeaturedAdapter(getContext()));
+        binding.recvFeatured.setAdapter(new SearchFeaturedAdapter(getlist(), getContext()));
         binding.recvFeatured.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
         binding.recvRecently.setAdapter(new SearchRecentlyAdapter(recentlyList(), getContext()));
         binding.recvRecently.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -45,6 +46,11 @@ public class SearchFragment extends Fragment {
         list.add(new SearchDTO(R.drawable.a5, R.drawable.a6, "Warming up", "General Technique"));
 
         return list;
+    }
+
+    public ArrayList<FeaturedDTO> getlist(){
+        FeaturedActivity activity = new FeaturedActivity();
+        return activity.featuredList();
     }
 
 }

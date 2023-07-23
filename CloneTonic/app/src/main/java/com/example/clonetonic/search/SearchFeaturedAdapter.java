@@ -8,15 +8,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clonetonic.databinding.ItemFeaturedBinding;
+import com.example.clonetonic.featured.FeaturedDTO;
 
 import java.util.ArrayList;
 
 public class SearchFeaturedAdapter extends RecyclerView.Adapter<SearchFeaturedAdapter.ViewHolder> {
 
     ItemFeaturedBinding binding;
+    ArrayList<FeaturedDTO> list;
     Context context;
 
-    public SearchFeaturedAdapter(Context context) {
+    public SearchFeaturedAdapter(ArrayList<FeaturedDTO> list, Context context) {
+        this.list = list;
         this.context = context;
     }
 
@@ -30,8 +33,8 @@ public class SearchFeaturedAdapter extends RecyclerView.Adapter<SearchFeaturedAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-
-
+        binding.imgvFeatured.setImageResource(list.get(i).getImgId());
+        binding.tvFeatured.setText(list.get(i).getTitle());
     }
 
     @Override

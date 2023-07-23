@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.clonetonic.R;
 import com.example.clonetonic.databinding.ItemLivenowBinding;
 
 import java.util.ArrayList;

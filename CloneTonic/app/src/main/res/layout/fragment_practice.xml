@@ -79,7 +79,7 @@
                             android:layout_gravity="center"
                             android:background="@drawable/background_gradient1"
                             android:padding="3dp"
-                            android:src="@drawable/ex_img" />
+                            android:src="@drawable/item_violin" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -273,14 +273,15 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ex_img" />
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/badge_start" />
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ex_img" />
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/badge_lover" />
 
                     </LinearLayout>
 

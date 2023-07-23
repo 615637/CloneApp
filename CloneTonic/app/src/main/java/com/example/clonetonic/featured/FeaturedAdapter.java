@@ -8,8 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clonetonic.databinding.ItemFeaturedReBinding;
 
+import java.util.ArrayList;
+
 public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ViewHolder> {
     ItemFeaturedReBinding binding;
+    ArrayList<FeaturedDTO> list;
+
+    public FeaturedAdapter(ArrayList<FeaturedDTO> list) {
+        this.list = list;
+    }
 
     @NonNull
     @Override
@@ -20,13 +27,14 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+        binding.imgvProfile.setImageResource(list.get(i).getImgId());
+        binding.tvTitle.setText(list.get(i).getTitle());
     }
 
     @Override
     public int getItemCount() {
-        return 12;
+        return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

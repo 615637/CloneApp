@@ -16,6 +16,7 @@
             android:layout_height="wrap_content">
 
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgv_profile"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/ex_img"
@@ -32,6 +33,7 @@
             android:layout_marginLeft="10dp">
 
             <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:text="Music Theory Group"
